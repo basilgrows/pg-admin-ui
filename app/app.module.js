@@ -1,4 +1,4 @@
-angular.module('pg admin ui', ['templates', 'ui.router'])
+angular.module('pg admin ui', ['templates', 'ui.router', 'ngTouch', 'ngAnimate' ])
 
 // config stuff
 
