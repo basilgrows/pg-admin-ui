@@ -1,0 +1,36 @@
+.nw-select {
+  border: 1px solid black;
+  border-radius: 2px;
+  position: relative;
+  line-height: 40px; }
+  .nw-select select {
+    opacity: 0;
+    position: absolute;
+    z-index: 2;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; }
+  .nw-select .nw-select__value {
+    padding-left: 15px; }
+  .nw-select:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border: 1px solid black;
+    border-width: 0 1px 1px 0;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 50%;
+    right: 15px;
+    margin-top: -8px;
+    z-index: 1; }
+
+header {
+  background-color: blue; }
+
+/*# sourceMappingURL=app.css.map */

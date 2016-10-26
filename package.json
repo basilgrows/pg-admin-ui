@@ -1,0 +1,24 @@
+{
+  "name": "pg-admin-ui",
+  "version": "1.0.0",
+  "description": "pg admin tool for creationwide",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "del": "^2.2.2",
+    "gulp-cli": "^1.2.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-sass": "^2.3.2",
+    "angular-touch": "^1.5.8",
+    "angular-animate": "^1.5.8"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,3 @@
+angular.module('templates', []).run(['$templateCache', function($templateCache) {$templateCache.put('pages/home/home.template.html','<p>Hello {{name}}</p>\n\n<div>\n\t<a ui-sref="other({id: 2})">Other Page</a>\n</div>\n\n<nw-select model="store.food">\n\t<option>Pizza</option>\n\t<option>Burger</option>\n\t<option>Fries</option>\n</nw-select>\n<span>Hello {{store.food}}</span>');
+$templateCache.put('pages/other/other.template.html','<h2>Hello Other Page ID: {{id}}</h2>\n\n<h3>Food from first page: {{store.food}}</h3>');
+$templateCache.put('shared/directives/nw-select/nwSelect.template.html','<div class="nw-select">\n\t<span class="nw-select__value" ng-bind="model"></span>\n\t<select name="" ng-model="model" ng-transclude>\n\t\n\t</select>\n</div>');}]);
