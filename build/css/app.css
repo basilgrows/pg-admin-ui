@@ -1,3 +1,471 @@
+/*
+    #Flexbox Layout Module
+Instead of using a grid system, we're using [flexbox](http://dev.w3.org/csswg/css-flexbox/) for layout. Flexbox is built to be responsive out of the box, and also allows for nearly any possible configuration of containers without hacks.
+
+*/
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.isInline {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex; }
+
+.isRow {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.isRowReverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse; }
+
+.isColumn {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.isColumnReverse {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse; }
+
+.flexNoWrap {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap; }
+
+.flexWrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.flexWrapReverse {
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse; }
+
+.spaceBetween {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.spaceAround {
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.justifyCenter {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.justifyEnd {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+
+.justifyStart {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+
+.contentCenter {
+  -ms-flex-line-pack: center;
+      align-content: center; }
+
+.alignCenter {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.alignEnd {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
+
+.alignStart {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+.alignBaseline {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline; }
+
+.selfCenter {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center; }
+
+.selfStart {
+  -ms-flex-item-align: start;
+      align-self: flex-start; }
+
+.selfEnd {
+  -ms-flex-item-align: end;
+      align-self: flex-end; }
+
+.selfAuto {
+  -ms-flex-item-align: auto;
+      -ms-grid-row-align: auto;
+      align-self: auto; }
+
+.selfBaseline {
+  -ms-flex-item-align: baseline;
+      align-self: baseline; }
+
+.dontFlex {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none; }
+
+.positionRelative {
+  position: relative; }
+
+.positionAbsolute {
+  position: absolute; }
+
+.flexWidth5 {
+  width: 5%; }
+
+.flexWidth10 {
+  width: 10%; }
+
+.flexWidth15 {
+  width: 15%; }
+
+.flexWidth20 {
+  width: 20%; }
+
+.flexWidth25 {
+  width: 25%; }
+
+.flexWidth30 {
+  width: 30%; }
+
+.flexWidth33 {
+  width: 33%; }
+
+.flexWidth35 {
+  width: 35%; }
+
+.flexWidth40 {
+  width: 40%; }
+
+.flexWidth45 {
+  width: 45%; }
+
+.flexWidth50 {
+  width: 50%; }
+
+.flexWidth55 {
+  width: 55%; }
+
+.flexWidth60 {
+  width: 60%; }
+
+.flexWidth65 {
+  width: 65%; }
+
+.flexWidth67 {
+  width: 67%; }
+
+.flexWidth70 {
+  width: 70%; }
+
+.flexWidth75 {
+  width: 75%; }
+
+.flexWidth80 {
+  width: 80%; }
+
+.flexWidth85 {
+  width: 85%; }
+
+.flexWidth90 {
+  width: 90%; }
+
+.flexWidth95 {
+  width: 95%; }
+
+.flexWidth100 {
+  width: 100%; }
+
+.flexHeight5 {
+  height: 5%; }
+
+.flexHeight15 {
+  height: 15%; }
+
+.flexHeight20 {
+  height: 20%; }
+
+.flexHeight25 {
+  height: 25%; }
+
+.flexHeight30 {
+  height: 30%; }
+
+.flexHeight35 {
+  height: 35%; }
+
+.flexHeight40 {
+  height: 40%; }
+
+.flexHeight45 {
+  height: 45%; }
+
+.flexHeight50 {
+  height: 50%; }
+
+.flexHeight55 {
+  height: 55%; }
+
+.flexHeight60 {
+  height: 60%; }
+
+.flexHeight65 {
+  height: 65%; }
+
+.flexHeight70 {
+  height: 70%; }
+
+.flexHeight75 {
+  height: 75%; }
+
+.flexHeight80 {
+  height: 80%; }
+
+.flexHeight85 {
+  height: 85%; }
+
+.flexHeight90 {
+  height: 90%; }
+
+.flexHeight95 {
+  height: 95%; }
+
+.flexHeight100 {
+  height: 100%; }
+
+.flexGrow {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2; }
+
+.flexChild > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+/*
+    ##Flex Correction: Make Flex Items in a Flex Container also be Flex Containers
+Saves us the hassle of setting flex container on every div in an html template. Note that it has been limited to child selectors only, not all descendent elements. Because flex containers only apply their flex to children (not all descendents), this rule should mimic that behavior.
+**NOTE:** this breaks buttons and stuff, so use extremely sparingly.
+    <div class="flex isRow styleguideBox"><h3>Flex Container</h3>
+        <div class="flex isRow styleguideBox">Flex Item with Children
+            <div class="styleguideBox">Flex Item 2nd Level</div>
+            <div class="styleguideBox">Flex Item 2nd Level</div>
+        </div>
+        <div class="styleguideBox">Flex Item 2</div>
+        <div class="styleguideBox">Flex Item 3</div>
+    </div>
+*/
+.flex.childrenFlexToo > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+/*
+    ##Flex Correction: Fix Flex Container Scrolling
+Stops things within a flex container that needs to scroll from squishing instead of staying properly sized, and therefore overflowing. By default, flex wants to fit its children into the container without overflow, which causes oddities.
+The declaration has been limited to child selectors only, as only children of a flex container are flex items. Therefore, using a child selector limits goofy inheritance issues within deeply nested flex containers.
+*/
+.flex.dontFlex > div {
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none; }
+
+/*
+    #Base Margin Declarations
+*/
+.marginAuto {
+  margin: auto; }
+
+.marginTopAuto {
+  margin-top: auto; }
+
+.marginBottomAuto {
+  margin-bottom: auto; }
+
+.marginLeftAuto {
+  margin-left: auto; }
+
+.marginRightAuto {
+  margin-right: auto; }
+
+.marginExtraSmall {
+  margin: 0.2vmax; }
+
+.marginSmall {
+  margin: 0.5vmax; }
+
+.marginNormal {
+  margin: 1vmax; }
+
+.marginLarge {
+  margin: 1.2vmax; }
+
+.marginExtraLarge {
+  margin: 2vmax; }
+
+/*
+    #Base Padding Declarations
+*/
+.paddingExtraSmall {
+  padding: 0.2vmax; }
+
+.paddingSmall {
+  padding: 0.5vmax; }
+
+.paddingNormal {
+  padding: 1vmax; }
+
+.paddingLarge {
+  padding: 1.2vmax; }
+
+.paddingExtraLarge {
+  padding: 2vmax; }
+
+/*
+#Text Alignment
+*/
+.textRight {
+  text-align: right; }
+
+.textLeft {
+  text-align: left; }
+
+.textCenter {
+  text-align: center; }
+
+/*
+#Radius
+*/
+.radiusSmall {
+  border-radius: 0.2vmax; }
+
+.radiusNormal {
+  border-radius: 0.5vmax; }
+
+.radiusLarge {
+  border-radius: 1vmax; }
+
+.radiusRound {
+  border-radius: 100vmax; }
+
+.scrollContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: initial;
+          flex-direction: initial;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  overflow: auto;
+  max-width: 100%; }
+
+.application,
+body {
+  background: #333333;
+  color: #fafcfb;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  height: 100vh;
+  width: 100vw;
+  margin: 0; }
+
+a {
+  color: #30cdd7;
+  text-decoration: none; }
+
+.button {
+  background: #30cdd7;
+  color: #333333;
+  border-radius: 0.5vmax;
+  padding: 1.2vmax 1vmax;
+  margin: 1vmax; }
+
+.navBar {
+  background: #007d8a;
+  color: #fafcfb; }
+  .navBar.sideNav {
+    background: #004851;
+    text-align: right; }
+    .navBar.sideNav a {
+      color: #fafcfb; }
+      .navBar.sideNav a:hover {
+        background: rgba(250, 252, 251, 0.2); }
+      .navBar.sideNav a:active {
+        background: rgba(250, 252, 251, 0.2);
+        box-shadow: inset 0 0.5vmax 0 #004851; }
+  .navBar .button,
+  .navBar a {
+    color: #333333;
+    background: transparent;
+    padding: 1.2vmax 1vmax;
+    margin: 0;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-weight: 400; }
+    .navBar .button:hover,
+    .navBar a:hover {
+      background: rgba(250, 252, 251, 0.2); }
+    .navBar .button:active,
+    .navBar a:active {
+      background: rgba(250, 252, 251, 0.2);
+      box-shadow: inset 0 0.5vmax 0 #004851; }
+
+.sectionHeader {
+  font-weight: 600;
+  font-size: 2rem; }
+
+.card {
+  background: #fafcfb;
+  color: #333333;
+  border-radius: 0.5vmax;
+  padding: 0.5vmax;
+  margin: 0.5vmax; }
+  .card.jobCard {
+    min-width: 250px;
+    max-width: 400px; }
+    .card.jobCard .jobType {
+      font-weight: 600; }
+    .card.jobCard .itemTag, .card.jobCard .date, .card.jobCard .time {
+      font-size: .8rem;
+      border-radius: 0.2vmax;
+      margin: 0.2vmax;
+      padding: 0.2vmax;
+      background: #e0e1dd;
+      -webkit-box-flex: 0;
+          -ms-flex: none;
+              flex: none; }
+
 .nw-select {
   border: 1px solid black;
   border-radius: 2px;

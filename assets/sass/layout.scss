@@ -1,0 +1,244 @@
+/*
+    #Flexbox Layout Module
+Instead of using a grid system, we're using [flexbox](http://dev.w3.org/csswg/css-flexbox/) for layout. Flexbox is built to be responsive out of the box, and also allows for nearly any possible configuration of containers without hacks.
+
+*/
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.isInline {
+  display: inline-flex;
+}
+
+.isRow {
+  flex-direction: row;
+}
+.isRowReverse {
+  flex-direction: row-reverse;
+}
+.isColumn {
+  flex-direction: column;
+}
+.isColumnReverse {
+  flex-direction: column-reverse;
+}
+
+.flexNoWrap {
+  flex-wrap: nowrap;
+}
+.flexWrap {
+  flex-wrap: wrap;
+}
+.flexWrapReverse {
+  flex-wrap: wrap-reverse;
+}
+
+.spaceBetween {
+  justify-content: space-between;
+}
+.spaceAround {
+  justify-content: space-around;
+}
+.justifyCenter {
+  justify-content: center;
+}
+.justifyEnd {
+  justify-content: flex-end;
+}
+.justifyStart {
+  justify-content: flex-start;
+}
+
+.contentCenter {
+  align-content: center;
+}
+
+.alignCenter {
+  align-items: center;
+}
+.alignEnd {
+  align-items: flex-end;
+}
+.alignStart {
+  align-items: flex-start;
+}
+.alignBaseline {
+  align-items: baseline;
+}
+
+.selfCenter {
+  align-self: center;
+}
+.selfStart {
+  align-self: flex-start;
+}
+.selfEnd {
+  align-self: flex-end;
+}
+.selfAuto {
+  align-self: auto;
+}
+.selfBaseline {
+  align-self: baseline;
+}
+
+.dontFlex {
+  flex: none;
+}
+
+
+.positionRelative {
+  position: relative;
+}
+.positionAbsolute {
+  position: absolute;
+}
+
+.flexWidth5 {width:5%}
+.flexWidth10 {width:10%}
+.flexWidth15 {width:15%}
+.flexWidth20 {width:20%}
+.flexWidth25 {width:25%}
+.flexWidth30 {width:30%}
+.flexWidth33 {width:33%}
+.flexWidth35 {width:35%}
+.flexWidth40 {width:40%}
+.flexWidth45 {width:45%}
+.flexWidth50 {width:50%}
+.flexWidth55 {width:55%}
+.flexWidth60 {width:60%}
+.flexWidth65 {width:65%}
+.flexWidth67 {width:67%}
+.flexWidth70 {width:70%}
+.flexWidth75 {width:75%}
+.flexWidth80 {width:80%}
+.flexWidth85 {width:85%}
+.flexWidth90 {width:90%}
+.flexWidth95 {width:95%}
+.flexWidth100 {width:100%}
+
+.flexHeight5 {height:5%}
+.flexHeight15 {height:15%}
+.flexHeight20 {height:20%}
+.flexHeight25 {height:25%}
+.flexHeight30 {height:30%}
+.flexHeight35 {height:35%}
+.flexHeight40 {height:40%}
+.flexHeight45 {height:45%}
+.flexHeight50 {height:50%}
+.flexHeight55 {height:55%}
+.flexHeight60 {height:60%}
+.flexHeight65 {height:65%}
+.flexHeight70 {height:70%}
+.flexHeight75 {height:75%}
+.flexHeight80 {height:80%}
+.flexHeight85 {height:85%}
+.flexHeight90 {height:90%}
+.flexHeight95 {height:95%}
+.flexHeight100 {height:100%}
+
+.flexGrow {
+  flex-grow: 2;
+}
+.flexChild > div {
+  display: flex;
+}
+
+/*
+    ##Flex Correction: Make Flex Items in a Flex Container also be Flex Containers
+Saves us the hassle of setting flex container on every div in an html template. Note that it has been limited to child selectors only, not all descendent elements. Because flex containers only apply their flex to children (not all descendents), this rule should mimic that behavior.
+**NOTE:** this breaks buttons and stuff, so use extremely sparingly.
+    <div class="flex isRow styleguideBox"><h3>Flex Container</h3>
+        <div class="flex isRow styleguideBox">Flex Item with Children
+            <div class="styleguideBox">Flex Item 2nd Level</div>
+            <div class="styleguideBox">Flex Item 2nd Level</div>
+        </div>
+        <div class="styleguideBox">Flex Item 2</div>
+        <div class="styleguideBox">Flex Item 3</div>
+    </div>
+*/
+
+.flex.childrenFlexToo > div {
+  display:flex;
+  justify-content: space-between;
+}
+
+/*
+    ##Flex Correction: Fix Flex Container Scrolling
+Stops things within a flex container that needs to scroll from squishing instead of staying properly sized, and therefore overflowing. By default, flex wants to fit its children into the container without overflow, which causes oddities.
+The declaration has been limited to child selectors only, as only children of a flex container are flex items. Therefore, using a child selector limits goofy inheritance issues within deeply nested flex containers.
+*/
+.flex.dontFlex > div {
+  flex: none;
+}
+
+/*
+    #Base Margin Declarations
+*/
+
+.marginAuto {
+  margin: auto;
+}
+.marginTopAuto {
+  margin-top: auto;
+}
+.marginBottomAuto {
+  margin-bottom: auto;
+}
+.marginLeftAuto {
+  margin-left: auto;
+}
+.marginRightAuto {
+  margin-right: auto;
+}
+
+.marginExtraSmall {margin: $spacing-extra-small;}
+.marginSmall {margin: $spacing-small;}
+.marginNormal {margin: $spacing-normal;}
+.marginLarge {margin: $spacing-large;}
+.marginExtraLarge {margin: $spacing-extra-large;}
+
+/*
+    #Base Padding Declarations
+*/
+
+.paddingExtraSmall {padding: $spacing-extra-small;}
+.paddingSmall {padding: $spacing-small;}
+.paddingNormal {padding: $spacing-normal;}
+.paddingLarge {padding: $spacing-large;}
+.paddingExtraLarge {padding: $spacing-extra-large;}
+
+/*
+#Text Alignment
+*/
+
+.textRight {
+  text-align: right;
+}
+.textLeft {
+  text-align: left;
+}
+.textCenter {
+  text-align: center;
+}
+
+/*
+#Radius
+*/
+
+.radiusSmall {border-radius: $radius-small;}
+.radiusNormal {border-radius: $radius-normal;}
+.radiusLarge {border-radius: $radius-large;}
+.radiusRound {border-radius: $radius-round;}
+
+
+.scrollContainer {
+  display: flex;
+  flex-direction: initial;
+  flex-grow: 2;
+  overflow: auto;
+  max-width: 100%;
+}

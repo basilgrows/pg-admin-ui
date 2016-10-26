@@ -1,0 +1,56 @@
+// Variable Declarations
+
+// Spacing & Size Defaults
+
+$spacing-extra-small: .2vmax;
+$spacing-small: .5vmax;
+$spacing-normal: 1vmax;
+$spacing-large: 1.2vmax;
+$spacing-extra-large: 2vmax;
+
+$radius-small: .2vmax;
+$radius-normal: .5vmax;
+$radius-large: 1vmax;
+$radius-round: 100vmax;
+
+// Colors
+
+$nationwide: #1c57a5;
+
+$background: #333333;
+$background-alt: #fafcfb;
+
+$color: #fafcfb;
+$color-alt: #333333;
+
+$action: #58c140;
+$action-medium: #3a913f;
+$action-dark: #36573d;
+
+$active: #30cdd7;
+$active-medium: #007d8a;
+$active-dark: #004851;
+
+$warning: #e85b16;
+$warning-medium: #ab5925;
+$warning-dark: #7b4931;
+
+$error: #d32436;
+$error-medium: #9e2a2b;
+$error-dark: #5d2a2c;
+
+$info: #5bc6e8;
+$info-medium: #5e9cae;
+$info-dark: #253746;
+
+$disabled-light: #e0e1dd;
+$disabled: #adafaf;
+$disabled-dark: #4d4f53;
+
+$highlight: rgba(250,252,251, .2);
+
+// Fonts
+
+$font-normal: 'Open Sans', sans-serif;
+
+
