@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c52ed90-e199-43f1-bd69-cfaf710b3495" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/libs/images/NandEagle-Vert-NW-Rev.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/fonts/OpenSans-Bold.ttf" afterPath="$PROJECT_DIR$/assets/libs/fonts/OpenSans-Bold.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/fonts/OpenSans-BoldItalic.ttf" afterPath="$PROJECT_DIR$/assets/libs/fonts/OpenSans-BoldItalic.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/fonts/OpenSans-ExtraBold.ttf" afterPath="$PROJECT_DIR$/assets/libs/fonts/OpenSans-ExtraBold.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/fonts/OpenSans-ExtraBoldItalic.ttf" afterPath="$PROJECT_DIR$/assets/libs/fonts/OpenSans-ExtraBoldItalic.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/fonts/OpenSans-Italic.ttf" afterPath="$PROJECT_DIR$/assets/libs/fonts/OpenSans-Italic.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/fonts/OpenSans-Light.ttf" afterPath="$PROJECT_DIR$/assets/libs/fonts/OpenSans-Light.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/fonts/OpenSans-LightItalic.ttf" afterPath="$PROJECT_DIR$/assets/libs/fonts/OpenSans-LightItalic.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/fonts/OpenSans-Regular.ttf" afterPath="$PROJECT_DIR$/assets/libs/fonts/OpenSans-Regular.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/fonts/OpenSans-Semibold.ttf" afterPath="$PROJECT_DIR$/assets/libs/fonts/OpenSans-Semibold.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/fonts/OpenSans-SemiboldItalic.ttf" afterPath="$PROJECT_DIR$/assets/libs/fonts/OpenSans-SemiboldItalic.ttf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/pages/home/home.template.html" afterPath="$PROJECT_DIR$/app/pages/home/home.template.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/sass/app.scss" afterPath="$PROJECT_DIR$/assets/sass/app.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/sass/components.scss" afterPath="$PROJECT_DIR$/assets/sass/components.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/sass/variables.scss" afterPath="$PROJECT_DIR$/assets/sass/variables.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/css/app.css" afterPath="$PROJECT_DIR$/build/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/css/app.css.map" afterPath="$PROJECT_DIR$/build/css/app.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/index.html" afterPath="$PROJECT_DIR$/build/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/js/templates.js" afterPath="$PROJECT_DIR$/build/js/templates.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="pg-admin-ui.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -845,7 +825,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1477496350557</updated>
-      <workItem from="1477496351889" duration="18645000" />
+      <workItem from="1477496351889" duration="18669000" />
     </task>
     <task id="LOCAL-00001" summary="Getting the basics set up">
       <created>1477512156412</created>
@@ -861,11 +841,18 @@
       <option name="project" value="LOCAL" />
       <updated>1477569839965</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Responsive cards">
+      <created>1477577105350</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1477577105350</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18645000" />
+    <option name="totallyTimeSpent" value="18669000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1592" y="-84" width="1588" height="1049" extended-state="0" />
@@ -939,7 +926,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Getting the basics set up" />
     <MESSAGE value="Added side nav" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added side nav" />
+    <MESSAGE value="Responsive cards" />
+    <option name="LAST_COMMIT_MESSAGE" value="Responsive cards" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
