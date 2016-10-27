@@ -6,8 +6,8 @@
     "app/app.routes.js",
     "app/pages/home/HomeCtrl.js",
     "app/pages/jobDetails/jobDetailsCtrl.js",
-    "app/pages/newJob/newJobCtrl.js",
     "app/pages/other/OtherCtrl.js",
+    "app/pages/newJob/newJobCtrl.js",
     "app/shared/services/app.service.js",
     "app/shared/directives/nw-select/nwSelect.js"
   ],
@@ -18,8 +18,8 @@
     "angular.module('pg admin ui')\n\n.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',\n    function($stateProvider, $urlRouterProvider, $locationProvider) {\n\n    // if you want html5 style urls\n    //$locationProvider.html5Mode(true);\n    \n    // where to go when a route is not matched\n    $urlRouterProvider.otherwise('/');\n\n    $stateProvider\n        .state('home', {\n            url: '/',\n            templateUrl: 'pages/home/home.template.html',\n            controller: 'HomeCtrl'\n        })\n        .state('other', {\n            url: '/other/:id',\n            templateUrl: 'pages/other/other.template.html',\n            controller: 'OtherCtrl'\n        })\n        .state('newJob', {\n            url: '/newJob/',\n            templateUrl: 'pages/newJob/newJob.template.html',\n            controller: 'NewJobCtrl'\n        })\n        .state('jobDetails', {\n            url: '/jobDetails/',\n            templateUrl: 'pages/jobDetails/jobDetails.template.html',\n            controller: 'JobDetailsCtrl'\n        })\n        // yo ux-boilerplate:page DO NOT REMOVE\n        ;\n\n}]);",
     "angular.module('pg admin ui')\n\n.controller('HomeCtrl', ['$scope', function($scope) {\n\t\n\t$scope.name = \"Calvin\";\n\t\n}]);",
     "angular.module('pg admin ui')\n\n.controller('JobDetailsCtrl', ['$scope', '$stateParams', function($scope, $stateParams) {\n\t\n\t$scope.id = $stateParams.id;\n\t\n}]);",
-    "angular.module('pg admin ui')\n\n.controller('NewJobCtrl', ['$scope', '$stateParams', function($scope, $stateParams) {\n\t\n\t$scope.id = $stateParams.id;\n\t\n}]);",
     "angular.module('pg admin ui')\n\n.controller('OtherCtrl', ['$scope', '$stateParams', function($scope, $stateParams) {\n\t\n\t$scope.id = $stateParams.id;\n\t\n}]);",
+    "angular.module('pg admin ui')\n\n.controller('NewJobCtrl', ['$scope', '$stateParams', function($scope, $stateParams) {\n\t\n\t$scope.id = $stateParams.id;\n\t\n}]);",
     "angular.module(\"pg admin ui\")\n\n// factories are services that return an object, rather than a function to call 'new' on\n.factory('AppService', [/* no dependencies */ function() {\n\t\n\t// return an empty object to save data to across pages\n\treturn {};\n\t\n}]);",
     "angular.module(\"pg admin ui\")\n\n.directive('nwSelect', function() {\n\t\n\treturn {\n\t\trestrict: 'E', // only works when used as element <nw-select>\n\t\tscope: {\n\t\t\tmodel: '=' // sets $scope.model to the value of the 'model' attribute on <nw-select>\n\t\t}, // isolates the scope from being messed with, except for defined attributes\n\t\ttransclude: true, // allows <options> in the <nw-select> to be transcluded to another spot in the template\n\t\ttemplateUrl: 'shared/directives/nw-select/nwSelect.template.html',\n\t\t// template: 'could define template directly in here as a string (good for small templates)',\n\t\tcontroller: ['$scope', function($scope) {\n\t\t\t// this particular directive doesn't need any controller code\n\t\t}],\n\t\t// controller: 'ControllerName' if you want to define it in a separate file\n\t};\n\t\n});"
   ]

@@ -503,6 +503,10 @@ button {
           -ms-grid-row-align: center;
           align-self: center; }
 
+.label {
+  padding: 0.5vmax;
+  width: 15%; }
+
 .sectionHeader {
   font-weight: 600;
   font-size: 2rem;
@@ -569,9 +573,17 @@ button {
   .card.jobCard {
     min-width: 320px;
     width: 33%; }
+    .card.jobCard .label {
+      width: 10%; }
   .card.detailsCard {
     min-width: 320px;
-    width: 100%; }
+    max-width: 100%; }
+    .card.detailsCard .cardContent {
+      font-size: 1.2rem; }
+      .card.detailsCard .cardContent .jobType {
+        font-size: 1.5rem; }
+      .card.detailsCard .cardContent .itemTag, .card.detailsCard .cardContent .date, .card.detailsCard .cardContent .time {
+        font-size: 1rem; }
 
 .itemTag, .date, .time {
   font-size: .8rem;
@@ -582,6 +594,9 @@ button {
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none; }
+
+.disabled {
+  opacity: 0.5; }
 
 @media (max-width: 1042px) {
   .card.jobCard {

@@ -73,7 +73,7 @@ angular.module('pg admin ui')
 
 angular.module('pg admin ui')
 
-.controller('NewJobCtrl', ['$scope', '$stateParams', function($scope, $stateParams) {
+.controller('OtherCtrl', ['$scope', '$stateParams', function($scope, $stateParams) {
 	
 	$scope.id = $stateParams.id;
 	
@@ -81,7 +81,7 @@ angular.module('pg admin ui')
 
 angular.module('pg admin ui')
 
-.controller('OtherCtrl', ['$scope', '$stateParams', function($scope, $stateParams) {
+.controller('NewJobCtrl', ['$scope', '$stateParams', function($scope, $stateParams) {
 	
 	$scope.id = $stateParams.id;
 	
