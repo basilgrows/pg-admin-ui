@@ -20,6 +20,16 @@ angular.module('pg admin ui')
             templateUrl: 'pages/other/other.template.html',
             controller: 'OtherCtrl'
         })
+        .state('newJob', {
+            url: '/newJob/',
+            templateUrl: 'pages/newJob/newJob.template.html',
+            controller: 'NewJobCtrl'
+        })
+        .state('jobDetails', {
+            url: '/jobDetails/',
+            templateUrl: 'pages/jobDetails/jobDetails.template.html',
+            controller: 'JobDetailsCtrl'
+        })
         // yo ux-boilerplate:page DO NOT REMOVE
         ;
 

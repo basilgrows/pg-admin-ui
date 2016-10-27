@@ -395,21 +395,68 @@ body {
   background: #333333;
   color: #fafcfb;
   font-family: "Open Sans", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   height: 100vh;
   width: 100vw;
   margin: 0; }
+
+input, textarea, keygen, select, button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  padding: 0.5vmax;
+  margin: 0.5vmax;
+  border-radius: 0.2vmax;
+  border: 0; }
+
+input, select {
+  background: #fafcfb;
+  color: #333333;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2; }
 
 a {
   color: #30cdd7;
   text-decoration: none; }
 
-.button {
+.button,
+button {
   background: #30cdd7;
   color: #333333;
-  border-radius: 0.5vmax;
-  padding: 1.2vmax 1vmax;
-  margin: 1vmax; }
+  padding: 0.5vmax 1vmax;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.formContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      align-self: center; }
+
+.form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .form-group label {
+    padding: 0.5vmax;
+    width: 20%;
+    text-align: right; }
 
 .navBar {
   background: #007d8a;
@@ -480,50 +527,61 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
-.card.jobCard {
-  min-width: 320px;
-  width: 33%; }
-
-.card .cardContent {
-  background: #fafcfb;
-  color: #333333;
-  border-radius: 0.5vmax;
-  font-size: .9rem;
-  padding: 0.5vmax;
-  margin: 0.5vmax;
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-  overflow: hidden;
-  box-shadow: 0 0 1vmax rgba(0, 0, 0, 0.5); }
-  .card .cardContent .jobType {
-    font-weight: 400;
-    font-size: 1rem;
-    margin: -0.5vmax 0 0.2vmax -0.5vmax;
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .card .cardContent {
+    background: #fafcfb;
+    color: #333333;
+    border-radius: 0.5vmax;
+    font-size: .9rem;
     padding: 0.5vmax;
-    -webkit-box-flex: 2;
-        -ms-flex-positive: 2;
-            flex-grow: 2;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 105%;
-    background: #58c140;
-    color: #fafcfb; }
-    .card .cardContent .jobType.pg {
-      background: #fdba2e;
-      color: #333333; }
-    .card .cardContent .jobType.um {
-      background: #e85b16; }
-  .card .cardContent .itemTag, .card .cardContent .date, .card .cardContent .time {
-    font-size: .8rem;
-    border-radius: 0.2vmax;
-    margin: 0.2vmax;
-    padding: 0.2vmax;
-    background: #e0e1dd;
+    margin: 0.5vmax;
     -webkit-box-flex: 0;
         -ms-flex: none;
-            flex: none; }
+            flex: none;
+    overflow: hidden;
+    box-shadow: 0 0 1vmax rgba(0, 0, 0, 0.5); }
+    .card .cardContent .jobType {
+      font-weight: 400;
+      font-size: 1rem;
+      margin: -0.5vmax 0 0.2vmax -0.5vmax;
+      padding: 0.5vmax;
+      -webkit-box-flex: 2;
+          -ms-flex-positive: 2;
+              flex-grow: 2;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 105%;
+      background: #58c140;
+      color: #fafcfb; }
+      .card .cardContent .jobType.pg {
+        background: #fdba2e;
+        color: #333333; }
+      .card .cardContent .jobType.um {
+        background: #e85b16; }
+  .card.jobCard {
+    min-width: 320px;
+    width: 33%; }
+  .card.detailsCard {
+    min-width: 320px;
+    width: 100%; }
+
+.itemTag, .date, .time {
+  font-size: .8rem;
+  border-radius: 0.2vmax;
+  margin: 0.2vmax;
+  padding: 0.2vmax;
+  background: #e0e1dd;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none; }
 
 @media (max-width: 1042px) {
   .card.jobCard {

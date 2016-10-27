@@ -3,10 +3,26 @@ body {
   background: $background;
   color: $color;
   font-family: $font-normal;
-  font-weight: 300;
+  font-weight: 400;
   height: 100vh;
   width: 100vw;
   margin: 0;
+}
+
+input, textarea, keygen, select, button {
+  display: flex;
+  font-family: $font-normal;
+  font-size: 1rem;
+  padding: $spacing-small;
+  margin: $spacing-small;
+  border-radius: $radius-small;
+  border: 0;
+}
+
+input, select {
+  background: $background-alt;
+  color: $color-alt;
+  flex-grow: 2;
 }
 
 a {
@@ -14,12 +30,28 @@ a {
   text-decoration: none;
 }
 
-.button {
+.button,
+button {
   background: $active;
   color: $color-alt;
-  border-radius: $radius-normal;
-  padding: $spacing-large $spacing-normal;
-  margin: $spacing-normal;
+  padding: $spacing-small $spacing-normal;
+  justify-content: center;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+.form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  label {
+    padding: $spacing-small;
+    width: 20%;
+    text-align: right;
+  }
 }
 
 .navBar {
@@ -87,10 +119,8 @@ a {
 }
 
 .card {
-  &.jobCard {
-    min-width: 320px;
-    width: 33%;
-  }
+  display: flex;
+  flex-direction: column;
   .cardContent {
     background: $background-alt;
     color: $color-alt;
@@ -119,15 +149,24 @@ a {
         background: $um;
       }
     }
-    .itemTag, .date, .time {
-      font-size: .8rem;
-      border-radius: $radius-small;
-      margin: $spacing-extra-small;
-      padding: $spacing-extra-small;
-      background: $disabled-light;
-      flex: none;
-    }
   }
+  &.jobCard {
+    min-width: 320px;
+    width: 33%;
+  }
+  &.detailsCard {
+    min-width: 320px;
+    width: 100%;
+  }
+}
+
+.itemTag, .date, .time {
+  font-size: .8rem;
+  border-radius: $radius-small;
+  margin: $spacing-extra-small;
+  padding: $spacing-extra-small;
+  background: $disabled-light;
+  flex: none;
 }
 
 @media (max-width: 1042px) {

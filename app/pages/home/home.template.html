@@ -2,7 +2,7 @@
 	<span class="sectionHeader">Active</span>
 	<div class="cardContainer">
 		<div class="jobCard card">
-			<div class="cardContent">
+			<a ui-sref="jobDetails" class="cardContent">
 				<span class="jobType pg">Prospect Generator</span>
 				<div class="locationList flex isRow alignCenter">
 					<span class="itemTag">Ohio</span>
@@ -26,7 +26,7 @@
 					<span class="date">10-28-2016</span>
 					<span class="time">3:00 AM EST</span>
 				</div>
-			</div>
+			</a>
 		</div>
 	</div>
 
@@ -282,9 +282,5 @@
 </div>
 
 <div class="sideNav navBar flex">
-	<a>New</a>
-	<a>Edit</a>
-	<a>Details</a>
-	<a>Stop</a>
-	<a>Delete</a>
+	<a ui-sref="newJob">New</a>
 </div>
