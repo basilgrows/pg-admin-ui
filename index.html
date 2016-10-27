@@ -6,21 +6,24 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
     </head>
 
-    <body class="flex">
-        <div class="navBar flex isRow spaceBetween">
+    <body class="flex isColumnReverse">
+
+    <div ui-view class="pageContainer flex isRowReverse flexGrow">
+        View Not Loaded
+    </div>
+        <div class="navBar flex isRow spaceBetween flexWrap">
             <div class="flex isRow">
-                <a href="/">Dashboard</a>
+                <a class="logo">
+                    <img src="libs/images/NandEagle-Vert-NW-Rev.png">
+                </a>
+                <a href="/#/">Dashboard</a>
                 <a href="/calendar">Calendar</a>
                 <a>Job Log</a>
             </div>
-            <div class="flex isRow">
+            <div class="flex isRow marginLeftAuto">
                 <a>Settings</a>
                 <a>Sign Out</a>
             </div>
-        </div>
-
-        <div ui-view class="pageContainer flex isRow flexGrow">
-            View Not Loaded
         </div>
 
         <script src="libs/angular.min.js"></script>

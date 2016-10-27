@@ -416,7 +416,8 @@ a {
   color: #fafcfb;
   -webkit-box-flex: 0;
       -ms-flex: none;
-          flex: none; }
+          flex: none;
+  box-shadow: 0 0 1vmax rgba(0, 0, 0, 0.5); }
   .navBar.sideNav {
     background: #004851;
     text-align: right; }
@@ -429,7 +430,7 @@ a {
         box-shadow: inset 0 0.5vmax 0 #004851; }
   .navBar .button,
   .navBar a {
-    color: #333333;
+    color: #fafcfb;
     background: transparent;
     padding: 1.2vmax 1vmax;
     margin: 0;
@@ -442,11 +443,25 @@ a {
     .navBar .button:active,
     .navBar a:active {
       background: rgba(250, 252, 251, 0.2);
-      box-shadow: inset 0 0.5vmax 0 #004851; }
+      font-weight: 600;
+      box-shadow: inset 0 0.2vmax 0 #004851; }
+  .navBar a.logo {
+    padding: 0 1.2vmax;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .navBar a.logo img {
+      height: 2.25rem;
+      -ms-flex-item-align: center;
+          -ms-grid-row-align: center;
+          align-self: center; }
 
 .sectionHeader {
   font-weight: 600;
-  font-size: 2rem; }
+  font-size: 2rem;
+  background: rgba(250, 252, 251, 0.2);
+  padding: 0.5vmax;
+  box-shadow: 0 0 1vmax rgba(0, 0, 0, 0.5); }
 
 .cardContainer {
   display: -webkit-box;
@@ -460,65 +475,69 @@ a {
       flex-wrap: wrap;
   -webkit-box-flex: 0;
       -ms-flex: none;
-          flex: none; }
+          flex: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
-.card {
+.card.jobCard {
+  min-width: 320px;
+  width: 33%; }
+
+.card .cardContent {
   background: #fafcfb;
   color: #333333;
   border-radius: 0.5vmax;
+  font-size: .9rem;
   padding: 0.5vmax;
   margin: 0.5vmax;
   -webkit-box-flex: 0;
       -ms-flex: none;
-          flex: none; }
-  .card.jobCard {
-    min-width: 250px;
-    max-width: 400px; }
-    .card.jobCard .jobType {
-      font-weight: 600; }
-    .card.jobCard .itemTag, .card.jobCard .date, .card.jobCard .time {
-      font-size: .8rem;
-      border-radius: 0.2vmax;
-      margin: 0.2vmax;
-      padding: 0.2vmax;
-      background: #e0e1dd;
-      -webkit-box-flex: 0;
-          -ms-flex: none;
-              flex: none; }
+          flex: none;
+  overflow: hidden;
+  box-shadow: 0 0 1vmax rgba(0, 0, 0, 0.5); }
+  .card .cardContent .jobType {
+    font-weight: 400;
+    font-size: 1rem;
+    margin: -0.5vmax 0 0.2vmax -0.5vmax;
+    padding: 0.5vmax;
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 105%;
+    background: #58c140;
+    color: #fafcfb; }
+    .card .cardContent .jobType.pg {
+      background: #fdba2e;
+      color: #333333; }
+    .card .cardContent .jobType.um {
+      background: #e85b16; }
+  .card .cardContent .itemTag, .card .cardContent .date, .card .cardContent .time {
+    font-size: .8rem;
+    border-radius: 0.2vmax;
+    margin: 0.2vmax;
+    padding: 0.2vmax;
+    background: #e0e1dd;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none; }
 
-.nw-select {
-  border: 1px solid black;
-  border-radius: 2px;
-  position: relative;
-  line-height: 40px; }
-  .nw-select select {
-    opacity: 0;
-    position: absolute;
-    z-index: 2;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%; }
-  .nw-select .nw-select__value {
-    padding-left: 15px; }
-  .nw-select:after {
-    content: '';
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    border: 1px solid black;
-    border-width: 0 1px 1px 0;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    top: 50%;
-    right: 15px;
-    margin-top: -8px;
-    z-index: 1; }
+@media (max-width: 1042px) {
+  .card.jobCard {
+    width: 50%; } }
+
+@media (max-width: 717px) {
+  .card.jobCard {
+    width: 100%; } }
 
 header {
   background-color: blue; }
+
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("libs/fonts/OpenSans-Regular.ttf") format("ttf"); }
 
 /*# sourceMappingURL=app.css.map */

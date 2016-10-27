@@ -26,6 +26,7 @@ a {
   background: $active-medium;
   color: $color;
   flex: none;
+  box-shadow: $box-shadow;
   &.sideNav {
     background: $active-dark;
     text-align: right;
@@ -43,7 +44,7 @@ a {
 
   .button,
   a {
-    color: $color-alt;
+    color: $color;
     background: transparent;
     padding: $spacing-large $spacing-normal;
     margin: 0;
@@ -55,7 +56,16 @@ a {
     }
     &:active {
       background: $highlight;
-      box-shadow: inset 0 $spacing-small 0 $active-dark;
+      font-weight: 600;
+      box-shadow: inset 0 $spacing-extra-small 0 $active-dark;
+    }
+  }
+  a.logo {
+    padding: 0 $spacing-large;
+    display: flex;
+    img {
+      height: 2.25rem;
+      align-self: center;
     }
   }
 }
@@ -63,6 +73,9 @@ a {
 .sectionHeader {
   font-weight: 600;
   font-size: 2rem;
+  background: $highlight;
+  padding: $spacing-small;
+  box-shadow: $box-shadow;
 }
 
 .cardContainer {
@@ -70,20 +83,41 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   flex: none;
+  justify-content: space-between;
 }
 
 .card {
-  background: $background-alt;
-  color: $color-alt;
-  border-radius: $radius-normal;
-  padding: $spacing-small;
-  margin: $spacing-small;
-  flex: none;
   &.jobCard {
-    min-width: 250px;
-    max-width: 400px;
+    min-width: 320px;
+    width: 33%;
+  }
+  .cardContent {
+    background: $background-alt;
+    color: $color-alt;
+    border-radius: $radius-normal;
+    font-size: .9rem;
+    padding: $spacing-small;
+    margin: $spacing-small;
+    flex: none;
+    overflow: hidden;
+    box-shadow: $box-shadow;
     .jobType {
-      font-weight: 600;
+      font-weight: 400;
+      font-size: 1rem;
+      margin: -.5vmax 0 $spacing-extra-small -.5vmax;
+      padding: $spacing-small;
+      flex-grow: 2;
+      display: flex;
+      width: 105%;
+      background: $action;
+      color: $color;
+      &.pg {
+        background: $pg;
+        color: $color-alt;
+      }
+      &.um {
+        background: $um;
+      }
     }
     .itemTag, .date, .time {
       font-size: .8rem;
@@ -96,41 +130,17 @@ a {
   }
 }
 
-
-.nw-select {
-	border: 1px solid black;
-	border-radius: 2px;
-	position: relative;
-	line-height: 40px;
-	
-	select {
-		opacity: 0;
-		position: absolute;
-		z-index: 2;
-		appearance: none;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-	}
-	
-	.nw-select__value {
-		padding-left: 15px;
-	}
-	
-	&:after {
-		content: '';
-		width: 10px;
-		height: 10px;
-		position: absolute;
-		border: 1px solid black;
-		border-width: 0 1px 1px 0;
-		transform: rotate(45deg);
-		top: 50%;
-		right: 15px;
-		margin-top: -8px;
-		z-index: 1;
-	}
+@media (max-width: 1042px) {
+  .card {
+    &.jobCard {
+      width: 50%;
+    }
+  }
 }
-
-.wtf {}
+@media (max-width: 717px) {
+  .card {
+    &.jobCard {
+      width: 100%;
+    }
+  }
+}

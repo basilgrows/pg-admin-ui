@@ -2,3 +2,8 @@
 @import 'layout';
 @import 'components';
 @import 'home';
+
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url('libs/fonts/OpenSans-Regular.ttf') format('ttf');
+}
