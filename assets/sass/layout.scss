@@ -237,7 +237,7 @@ The declaration has been limited to child selectors only, as only children of a 
 
 .scrollContainer {
   display: flex;
-  flex-direction: initial;
+  flex-direction: column;
   flex-grow: 2;
   overflow: auto;
   max-width: 100%;

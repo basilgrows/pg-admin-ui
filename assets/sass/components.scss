@@ -25,6 +25,7 @@ a {
 .navBar {
   background: $active-medium;
   color: $color;
+  flex: none;
   &.sideNav {
     background: $active-dark;
     text-align: right;
@@ -64,12 +65,20 @@ a {
   font-size: 2rem;
 }
 
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: none;
+}
+
 .card {
   background: $background-alt;
   color: $color-alt;
   border-radius: $radius-normal;
   padding: $spacing-small;
   margin: $spacing-small;
+  flex: none;
   &.jobCard {
     min-width: 250px;
     max-width: 400px;
