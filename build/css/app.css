@@ -504,8 +504,7 @@ button {
           align-self: center; }
 
 .label {
-  padding: 0.5vmax;
-  width: 15%; }
+  padding: 0.5vmax; }
 
 .sectionHeader {
   font-weight: 600;
@@ -539,6 +538,8 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  .card .label {
+    width: 15%; }
   .card .cardContent {
     background: #fafcfb;
     color: #333333;
@@ -596,7 +597,25 @@ button {
           flex: none; }
 
 .disabled {
-  opacity: 0.5; }
+  opacity: 0.7; }
+
+.rowHeader {
+  background: #004851;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  box-shadow: 0 0 1vmax rgba(0, 0, 0, 0.5); }
+
+.jobRow {
+  background: rgba(250, 252, 251, 0.1);
+  color: #fafcfb;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none; }
+  .jobRow .itemTag, .jobRow .date, .jobRow .time {
+    background: rgba(250, 252, 251, 0.1); }
+  .jobRow:nth-child(even) {
+    background: rgba(250, 252, 251, 0.2); }
 
 @media (max-width: 1042px) {
   .card.jobCard {

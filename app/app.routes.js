@@ -30,6 +30,11 @@ angular.module('pg admin ui')
             templateUrl: 'pages/jobDetails/jobDetails.template.html',
             controller: 'JobDetailsCtrl'
         })
+        .state('jobLog', {
+            url: '/jobLog/',
+            templateUrl: 'pages/jobLog/jobLog.template.html',
+            controller: 'JobLogCtrl'
+        })
         // yo ux-boilerplate:page DO NOT REMOVE
         ;
 

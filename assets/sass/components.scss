@@ -104,7 +104,6 @@ button {
 
 .label {
   padding: $spacing-small;
-  width: 15%;
 }
 
 .sectionHeader {
@@ -126,6 +125,9 @@ button {
 .card {
   display: flex;
   flex-direction: column;
+  .label {
+    width: 15%;
+  }
   .cardContent {
     background: $background-alt;
     color: $color-alt;
@@ -188,6 +190,24 @@ button {
 
 .disabled {
   opacity: $disabled-element;
+}
+
+.rowHeader {
+  background: $active-dark;
+  flex: none;
+  box-shadow: $box-shadow;
+}
+
+.jobRow {
+  background: $highlight-light;
+  color: $color;
+  flex: none;
+  .itemTag, .date, .time {
+    background: $highlight-light;
+  }
+  &:nth-child(even) {
+    background: $highlight;
+  }
 }
 
 @media (max-width: 1042px) {
